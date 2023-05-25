@@ -1,22 +1,20 @@
 #include <iostream>
 
 using namespace std;
+//Q3
 int main()
 {
-    char ch = 'M';
-    int i = ch;
-    cout << ch << "ASCII코드는 " << i << "d입니다" << endl;
+    //eu style : l/100km, usa style : G/mile
+	// 리터 : 킬로 = 마일 : 갤런
+	// 100 * 1/3.875 : 62.4마일 = 몇 갤런 : 1마일?
+	double oilconsume;
+	
+	cout << "휘발유 소비량(100킬로미터당 리터 수) : ";
+	cin >> oilconsume;
+	const double kmtomile100 = 62.14;
+	const double litertogalon = 1 / 3.875;
 
-    cout << "이 문자 코드에 1을 더해보겠습니다." << endl;
-    ch += 1;
-    i = ch;
-    cout << ch << "의 ASCII코드는" << i << "입니다" << endl;
-
-    cout << "cout.put(ch)를 사용하여 char형 변수 ch를 화면에 출력 : ";
-    cout.put(ch);
-
-    cout.put('!');
-
-    cout << endl << "종료" << endl;
-    return 0;
+	double usaoilconsume = (kmtomile100) / (oilconsume * litertogalon);
+	cout << "휘발유 소비량(갤런당 마일 수) : " << usaoilconsume << endl;
+	
 }
